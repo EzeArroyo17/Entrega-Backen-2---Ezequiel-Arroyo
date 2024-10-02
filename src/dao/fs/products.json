@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Fernet",
+    "description": "Branca",
+    "price": 8000,
+    "img": "",
+    "code": 1000,
+    "stock": 100,
+    "category": "Bebida alcohólica"
+  },
+  {
+    "id": 2,
+    "title": "Cerveza Quilmes",
+    "description": "Lager",
+    "price": 3500,
+    "img": "",
+    "code": 1001,
+    "stock": 200,
+    "category": "Bebida alcohólica"
+  },
+  {
+    "id": 3,
+    "title": "Vino Malbec",
+    "description": "D.V. Catena",
+    "price": 6000,
+    "img": "",
+    "code": 1002,
+    "stock": 150,
+    "category": "Bebida alcohólica"
+  },
+  {
+    "id": 4,
+    "title": "Gancia",
+    "description": "Americano",
+    "price": 5000,
+    "img": "",
+    "code": 1003,
+    "stock": 120,
+    "category": "Bebida alcohólica"
+  },
+  {
+    "id": 5,
+    "title": "Coca-Cola",
+    "description": "Sabor original",
+    "price": 600,
+    "img": "",
+    "code": 1004,
+    "stock": 300,
+    "category": "Bebida sin alcohol"
+  },
+  {
+    "id": 6,
+    "title": "Agua Mineral",
+    "description": "Villavicencio",
+    "price": 400,
+    "img": "",
+    "code": 1005,
+    "stock": 250,
+    "category": "Bebida sin alcohol"
+  },
+  {
+    "id": 7,
+    "title": "Mate Cocido",
+    "description": "La Virginia",
+    "price": 350,
+    "img": "",
+    "code": 1006,
+    "stock": 180,
+    "category": "Bebida sin alcohol"
+  },
+  {
+    "id": 8,
+    "title": "Sprite",
+    "description": "Sabor limón",
+    "price": 550,
+    "img": "",
+    "code": 1007,
+    "stock": 280,
+    "category": "Bebida sin alcohol"
+  },
+  {
+    "id": 9,
+    "title": "Cerveza Patagonia",
+    "description": "Amber Lager",
+    "price": 4500,
+    "img": "",
+    "code": 1008,
+    "stock": 100,
+    "category": "Bebida alcohólica"
+  },
+  {
+    "id": 10,
+    "title": "Vino Torrontés",
+    "description": "Norton",
+    "price": 5500,
+    "img": "",
+    "code": 1009,
+    "stock": 130,
+    "category": "Bebida alcohólica"
+  }
+]
