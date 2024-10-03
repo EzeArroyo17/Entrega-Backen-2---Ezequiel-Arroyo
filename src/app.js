@@ -47,7 +47,7 @@ app.get("/", async (req, res) => {
     try {
         const listProducts = await ProductModel.paginate({}, { limit, page });
 
-        res.render("home", {
+        res.render("homeProduct", {
             products: listProducts.docs,
             hasPrevPage: listProducts.hasPrevPage,
             hasNextPage: listProducts.hasNextPage,

@@ -84,7 +84,11 @@ router.post("/login", async (req, res) => {
 
 router.get("/current", passport.authenticate("current", { session: false }), (req, res) => {
 
-    res.render("home", { email: req.user.email });
+    res.render("home", 
+    { email: req.user.email,
+        first_name:req.user.first_name,
+        last_name: req.user.last_name
+    });
 })
 
 

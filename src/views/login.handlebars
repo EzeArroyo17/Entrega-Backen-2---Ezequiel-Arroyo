@@ -8,7 +8,12 @@
     <br>
 
     <label for="password"> Contraseña: </label>
-    <input type="text" name="password" required>
+    <input type="text" name="password" required id="ocultar">
+
+    <br>
+
+    <label>mostrar contraseña</label>
+    <input type="checkbox" onclick="mostrarContraseña()">
 
     <br>
     <br>
@@ -16,4 +21,14 @@
     <button type="submit"> Iniciar Sesion </button>
 </form>
 
+<script>
+const mostrarContraseña = () => {
+    let input = document.getElementById("ocultar")
+    if(input.type === "password"){
+        input.type = "text"
+    }else{
+        input.type = "password"
+    }
+}
+</script>
 
