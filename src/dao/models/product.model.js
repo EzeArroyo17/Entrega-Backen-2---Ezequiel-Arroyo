@@ -4,7 +4,8 @@ import mongoosePaginate from "mongoose-paginate-v2";
 const productSchema = new mongoose.Schema({
     title:{
         type: String,
-        required:true
+        required:true,
+        trim: true
     },
     description:{
         type: String,
@@ -12,7 +13,8 @@ const productSchema = new mongoose.Schema({
     },
     price:{
         type: Number,
-        required: true
+        required: true,
+        min: 0 
     },
     code: {
         type: Number,
@@ -21,11 +23,13 @@ const productSchema = new mongoose.Schema({
     },
     stock: {
         type: Number,
-        required: true
+        required: true,
+        min: 0 
     },
     category:{
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     status: {
         type: Boolean,

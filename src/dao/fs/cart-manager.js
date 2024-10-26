@@ -7,7 +7,7 @@ class CartManager {
         this.cart = [];
         this.ultId = 0;
 
-        this.cargarCarritos()
+        this.cargarCarritos();
     }
 
     async cargarCarritos() {
@@ -35,7 +35,7 @@ class CartManager {
             id : ++this.ultId,
             products: []
         }
-        this.carts.push(nuevoCarrito);
+        this.cart.push(nuevoCarrito);
 
         await this.guardarCarritos();
         return nuevoCarrito;

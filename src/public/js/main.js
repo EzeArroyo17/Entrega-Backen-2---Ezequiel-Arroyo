@@ -2,7 +2,6 @@
 const socket = io();
 
 socket.on("product", (data) => {
-
     renderProducts(data)
 })
 
@@ -12,28 +11,32 @@ const renderProducts = (products) => {
 
     const containerProducts = document.getElementById("productsRealTime");
     containerProducts.innerHTML = "";
-
     products.forEach(product => {
-        const card = document.createElement("div")
-        card.innerHTML = `
-                        <ul>
-                            <li> ${product.title} </li>
-                            <li> ${product.description} </li>
-                            <li> ${product.price} </li>
-                            <button> Eliminar </button>
-                        </ul>
-                        `
+        const card = createProductCard(product);
         containerProducts.appendChild(card);
+    });
+};
 
-        card.querySelector("button").addEventListener("click", () => {
-            deleteProdcuts(product.id);
-
-        })
-    })
+const createProductCard = (product) => {
+    const card = document.createElement("div");
+    card.innerHTML = `
+        <ul>
+            <li>${product.title}</li>
+            <li>${product.description}</li>
+            <li>${product.price}</li>
+            <button>Eliminar</button>
+        </ul>
+    `;
+    
+    card.querySelector("button").addEventListener("click", () => {
+        deleteProducts(product.id);
+    });
+    
+    return card;
 }
 
 
-const deleteProdcuts = (id) => {
+const deleteProducts = (id) => {
     socket.emit("deleteProduct", id)
 }
 
@@ -59,4 +62,6 @@ form.addEventListener('submit', function (event) {
 
     document.getElementById("productsForm").reset();
 });
+
+
 

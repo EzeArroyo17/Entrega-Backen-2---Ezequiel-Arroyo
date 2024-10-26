@@ -3,6 +3,17 @@ import jwt from "passport-jwt";
 const JWTStrategy = jwt.Strategy;
 const ExtractJwt = jwt.ExtractJwt;
 
+
+const cookieExtractor = (req) => {
+    let token = null;
+    if (req && req.cookies) {
+        token = req.cookies["coderCookieToken"];
+    }
+    return token;
+}
+
+
+
 const initializePassport = () => {
     passport.use("current", new JWTStrategy({ 
         jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),
@@ -18,12 +29,5 @@ const initializePassport = () => {
 
 }
 
-const cookieExtractor = (req) => {
-    let token = null;
-    if (req && req.cookies) {
-        token = req.cookies["coderCookieToken"];
-    }
-    return token;
-}
 
 export default initializePassport;

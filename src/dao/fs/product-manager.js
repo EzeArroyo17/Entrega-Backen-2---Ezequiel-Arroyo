@@ -43,6 +43,7 @@ class ProductManager {
             return arrayProductos;
         } catch (error) {
             console.log("Error al leer el archivo", error); 
+            return []
         }
 
     }
